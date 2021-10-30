@@ -34,7 +34,7 @@ public class LionTest {
         }
 
         @Test
-        public void testCaseUsingParams() throws Exception {
+        public void testDoesHaveMane() throws Exception {
             Lion lion = new Lion(sex);
             boolean actualHasMane = lion.doesHaveMane();
             Assert.assertEquals(actualHasMane, expectedHasMane);
