@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -18,16 +17,16 @@ public class CatTest {
     @Test
     public void testGetSound() {
         Cat cat = new Cat(feline);
-        String actual = cat.getSound();
-        String expected = "Мяу";
-        Assert.assertEquals(expected, actual);
+        String actualSound = cat.getSound();
+        String expectedSound = "Мяу";
+        Assert.assertEquals(expectedSound, actualSound);
     }
 
     @Test
     public void testGetFood() throws Exception {
         Cat cat = new Cat(feline);
-        List<String> actual = cat.getFood();
-        List<String> expected = feline.eatMeat();
-        Assert.assertEquals(expected, actual);
+        List<String> actualFood = cat.getFood();
+        List<String> expectedFood = feline.eatMeat();
+        Assert.assertEquals(actualFood, expectedFood);
     }
 }
