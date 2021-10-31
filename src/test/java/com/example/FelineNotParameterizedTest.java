@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class FelineTest {
+public class FelineNotParameterizedTest {
 
     @Test
     public void testEatMeat() throws Exception {
@@ -25,18 +25,10 @@ public class FelineTest {
     }
 
     @Test
-    public void testGetKittensDefaultReturnOne() {
+    public void testGetKittensWithoutArgument() {
         Feline feline = new Feline();
-        int expectedCount = 1;
         int actualCount = feline.getKittens();
-        Assert.assertEquals(expectedCount, actualCount);
-    }
-
-    @Test
-    public void testGetKittensReturnSetNumbers() {
-        Feline feline = new Feline();
-        int expectedCount = 5;
-        int actualCount = feline.getKittens(expectedCount);
+        int expectedCount = 1;
         Assert.assertEquals(expectedCount, actualCount);
     }
 }

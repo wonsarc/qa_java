@@ -4,6 +4,13 @@
 # Log file
 *.log
 
+# Ignore IDE specific files
+.idea/
+
+# Ignore target without Jacoco report
+target/
+!site/
+
 # BlueJ files
 *.ctxt
 

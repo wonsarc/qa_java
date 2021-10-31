@@ -4,13 +4,14 @@ import java.util.List;
 
 public class LionAlex extends Lion {
 
+    private static Feline feline;
+
     public LionAlex() throws Exception {
-        super("Самец");
+        super("Самец", feline);
     }
 
     public List<String> getFriends() {
         return List.of("Марти", "Глория", "Мелман");
-
     }
 
     public String getPlaceOfLiving() {
@@ -18,7 +19,7 @@ public class LionAlex extends Lion {
     }
 
     @Override
-    public int getKittens(){
+    public int getKittens() {
         return 0;
     }
 }

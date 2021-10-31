@@ -11,7 +11,7 @@ public class LionAlexTest {
     @Test
     public void testGetFriends() throws Exception {
         LionAlex lionAlex = new LionAlex();
-        List<String> expectedFriends = Arrays.asList("Марти", "Глория", "Мелман");;
+        List<String> expectedFriends = Arrays.asList("Марти", "Глория", "Мелман");
         List<String> actualFriends = lionAlex.getFriends();
         Assert.assertEquals(expectedFriends, actualFriends);
     }
