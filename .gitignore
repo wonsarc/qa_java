@@ -4,12 +4,9 @@
 # Log file
 *.log
 
-# Ignore IDE specific files
-.idea/
-
 # Ignore target without Jacoco report
-target/
-!site/
+/target/
+!/target/site
 
 # BlueJ files
 *.ctxt
@@ -28,3 +25,4 @@ target/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/.idea/
