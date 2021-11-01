@@ -1,9 +1,7 @@
 package com.example;
 
 import org.junit.Assert;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -17,14 +15,10 @@ public class LionNotParameterizedTest {
     @Mock
     Feline feline;
 
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
-
     @Test
     public void testDivisionDoesHaveManeThrowsException() throws Exception {
-        thrown.expect(Exception.class);
-        thrown.expectMessage("Используйте допустимые значения пола животного - самей или самка");
-        Lion lion = new Lion("Вертолет", feline);
+        Exception exception = Assert.assertThrows(Exception.class, () -> new Lion("Вертолет", feline));
+        Assert.assertEquals("Используйте допустимые значения пола животного - самей или самка", exception.getMessage());
     }
 
     @Test
